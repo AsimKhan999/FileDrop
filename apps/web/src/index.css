@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0a0f0b;
+  --bg-surface: #0d1510;
+  --green-primary: #00ff41;
+  --green-dim: #00b82e;
+  --green-dark: #073d18;
+  --text-primary: #e6ffe9;
+  --text-muted: #719477;
+  --border: #17351f;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-main {
+  min-height: 100vh;
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 56px - 40px);
+  text-align: center;
+  padding: 24px 16px;
+  gap: 32px;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--green-dim);
+  border-radius: 999px;
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  background: rgba(0, 255, 65, 0.06);
+}
+
+.home h1 {
+  font-size: 3rem;
+  color: var(--green-primary);
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+}
+
+.home-accent {
+  color: var(--text-primary);
+}
+
+.logo {
+  color: var(--green-primary);
+}
+
+.logo-accent {
+  color: var(--text-primary);
+}
+
+.home-tagline {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.home-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 24px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home-action-icon {
+  color: var(--green-primary);
+  font-size: 0.875rem;
+}
+
+.home-action-btn:hover {
+  border-color: var(--green-primary);
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.home-action-btn.primary {
+  background: var(--green-primary);
+  color: #010b03;
+  border-color: var(--green-primary);
+}
+
+.home-action-btn.primary .home-action-icon {
+  color: #010b03;
+}
+
+.home-action-btn.primary:hover {
+  background: var(--green-dim);
+  border-color: var(--green-dim);
+}
+
+.home-features {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.home-feature-icon {
+  font-size: 1.25rem;
+}
+
+.home-footer {
+  color: var(--green-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 56px - 40px);
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  color: var(--green-primary);
+  margin-bottom: 0.5rem;
+}
+
+.not-found p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  border-color: var(--green-dim);
+  color: var(--green-primary);
+}
+
+.p2p-link-btn {
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.p2p-link-btn:hover {
+  border-color: var(--green-dim);
+  color: var(--green-primary);
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2.25rem;
+  }
+
+  .home-features {
+    gap: 16px;
+  }
+}
+
+@media (hover: none) {
+  button:hover,
+  a:hover {
+    background: inherit;
+    color: inherit;
+    border-color: inherit;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

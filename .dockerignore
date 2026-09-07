@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnp.*
+.janus/
+
+# Build outputs
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Storage (will be mounted as volume)
+storage/uploads/
+storage/temporary/
+
+# SSL certs (generated at runtime)
+apps/api/src/certs/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Generated JS
+apps/api/knexfile.js
+apps/api/knexfile.js.map
+apps/api/knexfile.d.ts
+apps/api/knexfile.d.ts.map
+
+# Coverage
+coverage/
+
+# Docker
+docker/data/
+
+# Tests
+tests/
+
+# Misc
+*.tgz
+.cache/
+README.md
+FileDrop Plan.md
+ecosystem.config.js

@@ -1,0 +1,83 @@
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.qr-modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  width: 320px;
+  position: relative;
+}
+
+.qr-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.qr-close:hover {
+  color: var(--green-primary);
+}
+
+.qr-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qr-label {
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.qr-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.qr-image {
+  width: 256px;
+  height: 256px;
+  border-radius: 4px;
+}
+
+.qr-loading,
+.qr-error {
+  width: 256px;
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.qr-error {
+  color: #ff4444;
+}
+
+.qr-footer {
+  text-align: center;
+}
+
+.qr-token {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+}

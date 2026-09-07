@@ -1,0 +1,305 @@
+.share-page {
+  min-height: calc(100vh - 56px - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.share-back {
+  width: 100%;
+  max-width: 400px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.share-back:hover {
+  color: var(--green-primary);
+}
+
+.share-header {
+  margin-bottom: 40px;
+}
+
+.share-header h1 {
+  font-size: 2.5rem;
+  color: var(--green-primary);
+}
+
+.share-loading {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.share-error {
+  text-align: center;
+}
+
+.share-error-logo {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--green-primary);
+  margin-bottom: 16px;
+}
+
+.share-error p {
+  color: var(--text-muted);
+}
+
+.share-content {
+  width: 100%;
+  max-width: 400px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.share-title {
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.share-summary {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.share-files {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.share-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.share-file:last-child {
+  border-bottom: none;
+}
+
+.share-file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.share-file-icon {
+  color: var(--green-dim);
+  font-size: 0.625rem;
+  flex-shrink: 0;
+}
+
+.share-file-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.file-name {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-size {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+}
+
+.share-file-download {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--green-primary);
+  border-radius: 4px;
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.share-file-download:hover {
+  background: var(--green-primary);
+  color: var(--bg-primary);
+}
+
+.share-download-all {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--green-primary);
+  border-radius: 4px;
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.share-download-all:hover:not(:disabled) {
+  background: var(--green-primary);
+  color: var(--bg-primary);
+}
+
+.share-download-all:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.share-expiry {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.share-expiry.expired {
+  color: #ff4444;
+}
+
+/* Password page */
+.share-password-text {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.share-password-input {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.share-password-input:focus {
+  outline: none;
+  border-color: var(--green-dim);
+}
+
+.share-password-input::placeholder {
+  color: var(--text-muted);
+}
+
+.share-password-error {
+  color: #ff4444;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.share-unlock-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--green-primary);
+  border-radius: 4px;
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.share-unlock-btn:hover:not(:disabled) {
+  background: var(--green-primary);
+  color: var(--bg-primary);
+}
+
+.share-unlock-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .share-page {
+    padding: 24px 12px;
+  }
+
+  .share-header {
+    margin-bottom: 24px;
+  }
+
+  .share-header h1 {
+    font-size: 2rem;
+  }
+
+  .share-content {
+    padding: 16px;
+  }
+
+  .share-file {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .share-file-icon {
+    display: none;
+  }
+
+  .file-name {
+    font-size: 0.8125rem;
+  }
+
+  .file-size {
+    font-size: 0.6875rem;
+  }
+
+  .share-file-download {
+    padding: 6px 10px;
+    font-size: 0.6875rem;
+  }
+
+  .share-download-all {
+    padding: 10px;
+    font-size: 0.8125rem;
+  }
+
+  .share-title {
+    font-size: 0.8125rem;
+  }
+
+  .share-summary {
+    font-size: 0.6875rem;
+  }
+}

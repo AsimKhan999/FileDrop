@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+.pnp.*
+.janus/
+
+# Build outputs
+dist/
+build/
+FileDrop Plan.md
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Storage
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/temporary/*
+!storage/temporary/.gitkeep
+
+# SSL certs (generated)
+apps/api/src/certs/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Generated JS from tsx
+apps/api/knexfile.js
+apps/api/knexfile.js.map
+apps/api/knexfile.d.ts
+apps/api/knexfile.d.ts.map
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Docker
+docker/data/
+
+# Tests
+tests/
+
+# PM2
+.pm2/
+
+# Misc
+*.tgz
+.cache/

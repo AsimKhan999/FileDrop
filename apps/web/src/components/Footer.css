@@ -1,0 +1,48 @@
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+}
+
+.footer-brand {
+  color: var(--green-primary);
+  font-weight: 700;
+}
+
+.footer-brand .logo-accent {
+  color: var(--text-primary);
+}
+
+.footer-sep {
+  color: var(--border);
+}
+
+.footer-text {
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .app-footer {
+    height: 36px;
+  }
+
+  .footer-content {
+    font-size: 0.625rem;
+  }
+}

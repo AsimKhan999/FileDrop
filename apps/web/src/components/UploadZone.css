@@ -1,0 +1,386 @@
+.upload-zone-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-zone:hover:not(.has-files) {
+  border-color: var(--green-dim);
+}
+
+.upload-zone.drag-over {
+  border-color: var(--green-primary);
+  background: var(--bg-surface);
+}
+
+.upload-zone.has-files {
+  cursor: default;
+  padding: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.upload-zone.uploading {
+  cursor: default;
+}
+
+.upload-empty-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: var(--green-primary);
+  margin-bottom: 16px;
+}
+
+.upload-text {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.upload-subtext {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.upload-button {
+  background: transparent;
+  border: 1px solid var(--green-primary);
+  color: var(--green-primary);
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  min-width: 160px;
+}
+
+.upload-button:hover {
+  background: var(--green-primary);
+  color: var(--bg-primary);
+}
+
+.upload-progress {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--green-primary);
+  transition: width 0.1s ease;
+}
+
+.progress-text {
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.upload-error {
+  color: #ff4444;
+  margin-top: 12px;
+}
+
+/* Files view */
+.upload-files-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.upload-files-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.upload-files-count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.files-count {
+  color: var(--green-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.files-label {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.files-total-size {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.upload-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.upload-files-list::-webkit-scrollbar {
+  display: none;
+}
+
+.upload-file-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.upload-file-row:last-child {
+  border-bottom: none;
+}
+
+.upload-file-icon {
+  color: var(--green-dim);
+  font-size: 0.625rem;
+  flex-shrink: 0;
+}
+
+.upload-file-name {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  min-width: 0;
+}
+
+.upload-file-size {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.upload-file-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.upload-file-remove:hover {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.upload-files-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.upload-password {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload-password-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.upload-password-toggle:hover {
+  color: var(--green-primary);
+  border-color: var(--green-dim);
+}
+
+.upload-password-input {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+}
+
+.upload-password-input:focus {
+  outline: none;
+  border-color: var(--green-dim);
+}
+
+.upload-password-input::placeholder {
+  color: var(--text-muted);
+}
+
+.upload-password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.upload-password-field .upload-password-input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.upload-password-eye {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+  line-height: 1;
+}
+
+.upload-password-eye:hover {
+  color: var(--green-primary);
+}
+
+.upload-add-more {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-add-more:hover {
+  border-color: var(--green-dim);
+  color: var(--green-primary);
+}
+
+.upload-submit {
+  flex: 2;
+  padding: 12px;
+  background: var(--green-primary);
+  border: none;
+  border-radius: 4px;
+  color: var(--bg-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-submit:hover {
+  background: #00cc33;
+}
+
+@media (max-width: 480px) {
+  .upload-zone {
+    padding: 32px 16px;
+    min-height: 180px;
+  }
+
+  .upload-zone.has-files {
+    padding: 12px;
+  }
+
+  .upload-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  .upload-text {
+    font-size: 1.125rem;
+  }
+
+  .upload-button {
+    padding: 10px 20px;
+    min-width: 140px;
+  }
+
+  .upload-files-list {
+    max-height: 200px;
+  }
+
+  .upload-file-name {
+    font-size: 0.8125rem;
+  }
+
+  .upload-file-size {
+    font-size: 0.6875rem;
+  }
+
+  .upload-files-actions {
+    flex-direction: column;
+  }
+
+  .upload-add-more,
+  .upload-submit {
+    flex: none;
+    width: 100%;
+  }
+}
